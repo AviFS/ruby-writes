@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' name="viewport">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #500070;
+  font-family: monospace;
+  font-size:30px;
+}
+
+h1 {
+  text-align: center;
+  color: #100010;
+  font-size: 48px;
+  font-family: Snell Roundhand, cursive;
+}
+
+#input {
+  font-family: monospace;
+  background-color: purple;
+  border-radius: 8px;
+  border-width: 1px;
+  border-color: rgb(136, 3, 138);
+  color: rgb(31, 7, 37);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  -moz-user-select: none;
+  outline-color: red;
+  /*outline: solid red 1px;*/
+}
+
+
+#input:hover {
+}
+
+button {
+  background-color: rgb(84, 10, 10);
+  border: none;
+  color: rgb(205, 57, 57);
+  padding: 4px 8px;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(152, 15, 15);
+  color: rgb(205, 57, 57);
+}
+
+.row {
+  display: flex;
+  border:rgb(31, 7, 37) 4px;
+  border-style:solid;
+    border-style:dotted;
+  border-radius: 30px;
+  padding: 20px 15px 10px 15px;
+  border-color:  #3a0151;
+
+}
+
+img {
+zoom:40%;
+}
+
+#container {
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 5px;
+    border-width: 3px;
+    border-color: purple;
+    border-width: 3px;
+}
+
+#ins {
+  margin-left:10px;
+}
+/* Create three equal columns that sits next to each other */
+.column {
+  padding: 0px;
+}
+
+#ccc {
+  margin-top:40px;
+}
+</style>
+
+<script>
+
+function populate(text) {
+  if (!text) {
+    text = document.getElementById('input').value;
+  }
+  var output = '';
+  for (var t of text) {
+    output += `
+    <div class="column">
+      <img src="animal-letters/${t}.png" alt="${t}">
+    </div>
+    `
+  }
+  document.getElementById('here').innerHTML = output;
+}
+</script>
+</head>
+<body onload='populate("lion");'>
+
+<h1>Ruby Writes</h1>
+
+<div id="ins">
+<input type='text' id='input'></input>
+<button type='button' onclick = 'populate("");'>Go</button>
+</div>
+<div id="ccc">
+<div id="container">
+<div class="row" id='here'>
+  <div class="column">
+    <img src="media/fa.jpg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="media/fb.jpg" alt="Forest" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="media/fc.jpg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="media/fd.jpg" alt="Forest" style="width:100%">
+  </div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
