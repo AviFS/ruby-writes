@@ -11,7 +11,7 @@ body {
 
 h1 {
   text-align: center;
-  color: #100010;
+  color: #817bca;
   font-size: 48px;
   font-family: Snell Roundhand, cursive;
 }
@@ -90,4 +90,8 @@ zoom:40%;
 
 #ccc {
   margin-top:40px;
+}
+
+#here {
+  background-image: url("RubyLetters/\ .png")
 }
